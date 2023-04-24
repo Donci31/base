@@ -69,6 +69,7 @@ public class TrainSensorTest {
     public void TestAlarm4() {
         when(mockedController.getReferenceSpeed()).thenReturn(1);
         sensor2.overrideSpeedLimit(-50);
+        sensor2.getSpeedLimit();
         sensor2.alarm();
         verify(mockedUser, times(1)).setAlarmState(true);
     }
