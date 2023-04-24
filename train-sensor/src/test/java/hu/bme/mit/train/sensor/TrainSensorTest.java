@@ -7,10 +7,13 @@ import hu.bme.mit.train.user.TrainUserImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 public class TrainSensorTest {
 
     TrainController controller;
+
+    TrainUser user;
 
     TrainSensor sensor;
 
@@ -28,5 +31,9 @@ public class TrainSensorTest {
         Assert.assertFalse(sensor.getTachograf().isEmpty());
         Assert.assertTrue(sensor.getTachograf().containsValue(0));
         Assert.assertFalse(sensor.getTachograf().containsValue(1));
+    }
+
+    @Test
+    public void TestAlarm() {
     }
 }

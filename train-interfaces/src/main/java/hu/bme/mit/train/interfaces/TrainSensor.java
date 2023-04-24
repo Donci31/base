@@ -11,4 +11,6 @@ public interface TrainSensor {
 	void overrideSpeedLimit(int speedLimit);
 
 	void saveCurrentState();
+
+	void alarm();
 }

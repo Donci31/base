@@ -41,4 +41,10 @@ public class TrainSensorImpl implements TrainSensor {
 		tachograf.put(time++, controller.getJoystickPosition(), controller.getReferenceSpeed());
 	}
 
+	@Override
+	public void alarm() {
+		if (speedLimit < 0 || 500 < speedLimit || controller.getReferenceSpeed() * 0.5 >= speedLimit) {
+			user.setAlarmState(true);
+		}
+	}
 }
