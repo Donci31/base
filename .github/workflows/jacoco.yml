@@ -34,7 +34,7 @@ jobs:
           java-version: '11'
       - name: Run tests
         run: |
-          mvn verify -Djacoco.destFile=exportJacoco/jacoco-slow-it.exec
+          mvn '-Dtest=*IntegrationTest' verify -Djacoco.destFile=exportJacoco/jacoco-slow-it.exec
       - name: Upload jacoco exec results
         uses: actions/upload-artifact@v2
         with:
