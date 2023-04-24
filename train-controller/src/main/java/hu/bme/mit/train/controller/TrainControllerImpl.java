@@ -12,6 +12,7 @@ public class TrainControllerImpl implements TrainController {
 	public TrainControllerImpl() {
 		while (true) {
 			followSpeed();
+			
 		}
 	}
 
